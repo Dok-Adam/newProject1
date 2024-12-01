@@ -21,15 +21,13 @@ struct MainView: View {
                         }
                     }
                 }
-                .background(Color.white) // Фон для скролла
-                .ignoresSafeArea(edges: .bottom) // Убираем лишние отступы
+                .background(Color.white)
+                .ignoresSafeArea(edges: .bottom)
                 
                 Rectangle()
                     .fill(Color.red)
                     .frame(height: 50)
                     .zIndex(1)
-                
-                // Скролл на весь экран
 
             }
         
