@@ -8,29 +8,26 @@
 import SwiftUI
 
 struct MainView: View {
+    let h: CGFloat = 50
+    
     var body: some View {
-  
-            VStack(spacing: 0) {
-                ScrollView {
-                    VStack {
-                        ForEach(1..<101) { index in
-                            Text("\(index)")
-                                .font(.title)
-                                .foregroundStyle(.gray)
-                                .frame(maxWidth: .infinity)
-                        }
-                    }
+        ScrollView {
+            VStack {
+                ForEach(1..<101) { index in
+                    Text("\(index)")
+                        .font(.title)
+                        .monospaced()
+                        .foregroundStyle(Color(.systemGray))
+                        .frame(maxWidth: .infinity)
+                        .padding(1)
                 }
-                .background(Color.white)
-                .ignoresSafeArea(edges: .bottom)
-                
-                Rectangle()
-                    .fill(Color.red)
-                    .frame(height: 50)
-                    .zIndex(1)
-
             }
-        
+        }
+        .safeAreaInset(edge: .bottom) {
+            Rectangle()
+                .fill(Color.red.opacity(0.8))
+                .frame(height: h)
+        }
     }
 }
 
