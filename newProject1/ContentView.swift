@@ -16,7 +16,6 @@ struct ContentView: View {
                     Label("First", systemImage: "star.fill")
                 }
         }
-        
     }
 }
 
